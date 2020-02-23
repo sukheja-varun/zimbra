@@ -1,0 +1,18 @@
+.title {
+  font-size: 36px;
+}
+
+.dropdown-label {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.dropdown-button {
+  width: 130px;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}

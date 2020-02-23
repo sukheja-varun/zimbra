@@ -27,4 +27,16 @@ export class CategoryService {
   fetchAllCategories(): Observable<CategoryI[]> {
     return this._http.get<CategoryI[]>(`${this.baseUrl}/categories`)
   }
+
+  /**
+   * @description it fetches a particular category whose id is given
+   *
+   * @param {number} categoryId
+   * @returns {Observable<CategoryI>}
+   * @memberof CategoryService
+   */
+  fetchAllCategoryById(categoryId: number): Observable<CategoryI> {
+    return this._http.get<CategoryI>(`${this.baseUrl}/categories/${categoryId}`)
+  }
+
 }

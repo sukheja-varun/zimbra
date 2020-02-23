@@ -4,6 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 // Services
 import { ProductService } from 'src/app/services/product.service';
 import { ProductI } from 'src/app/models/product.model';
+import { CategoryService } from 'src/app/services/category.service';
+import { CategoryI } from 'src/app/models/category.model';
 
 @Component({
   selector: 'app-product-details',
@@ -13,10 +15,12 @@ import { ProductI } from 'src/app/models/product.model';
 export class ProductDetailsComponent implements OnInit {
   productId: number;
   productDetails: ProductI;
+  categoryDetails: CategoryI;
 
   constructor(
     private _route: ActivatedRoute,
-    private _productService: ProductService
+    private _productService: ProductService,
+    private _categoryService: CategoryService
   ) { }
 
   /**
@@ -37,8 +41,14 @@ export class ProductDetailsComponent implements OnInit {
    */
   fetchProductDetails() {
     this._productService.fetchProductById(this.productId)
-      .subscribe(resp => this.productDetails = resp);
+      .subscribe(resp => {
+        this.productDetails = resp;
+        this.fetchCategory(this.productDetails.categoryId);
+      });
   }
 
-  
+  fetchCategory(categoryId: number) {
+    this._categoryService.fetchAllCategoryById(categoryId)
+      .subscribe(resp => this.categoryDetails = resp);
+  }
 }

@@ -5,8 +5,17 @@
     <img [src]="productDetails?.imageUrl" class="img-fluid" alt="" />
   </div>
   <div class="col-12 col-lg-6">
-    <div>Category: {{ productDetails?.categoryId }}</div>
-    <div>Product Name: {{ productDetails?.name }}</div>
-    <div>Product Description: {{ productDetails?.description }}</div>
+    <div>
+      <span>Category:</span>
+      <span>{{ categoryDetails?.name }}</span>
+    </div>
+    <div>
+      <span>Product Name:</span>
+      <span>{{ productDetails?.name }}</span>
+    </div>
+    <div>
+      <span>Product Description:</span>
+      <span>{{ productDetails?.description }}</span>
+    </div>
   </div>
 </div>

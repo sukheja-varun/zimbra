@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProductListingComponent } from './components/product-listing/product-listing.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

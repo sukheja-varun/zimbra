@@ -1,1 +1,12 @@
-<p>product-details works!</p>
+<h2>Product Details Page</h2>
+
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <img [src]="productDetails?.imageUrl" class="img-fluid" alt="" />
+  </div>
+  <div class="col-12 col-lg-6">
+    <div>Category: {{ productDetails?.categoryId }}</div>
+    <div>Product Name: {{ productDetails?.name }}</div>
+    <div>Product Description: {{ productDetails?.description }}</div>
+  </div>
+</div>

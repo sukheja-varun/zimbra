@@ -1,21 +1,23 @@
-<h2>Product Details Page</h2>
+<div class="title text-center mt-4 mb-5 border-bottom">
+  Product Details Page
+</div>
 
 <div class="row">
-  <div class="col-12 col-lg-6">
-    <img [src]="productDetails?.imageUrl" class="img-fluid" alt="" />
+  <div class="col-12 col-md-6">
+    <img [src]="productDetails?.imageUrl" class="img-fluid shadow" alt="" />
   </div>
-  <div class="col-12 col-lg-6">
-    <div>
-      <span>Category:</span>
-      <span>{{ categoryDetails?.name }}</span>
+  <div class="col-12 col-md-6 mb-4">
+    <div class="d-flex align-items-baseline">
+      <h2>Category:</h2>
+      <h3 class="text-secondary ml-2">{{ categoryDetails?.name }}</h3>
     </div>
-    <div>
-      <span>Product Name:</span>
-      <span>{{ productDetails?.name }}</span>
+    <div class="d-flex align-items-baseline">
+      <h2>Product Name:</h2>
+      <h3 class="text-secondary ml-2">{{ productDetails?.name }}</h3>
     </div>
-    <div>
-      <span>Product Description:</span>
-      <span>{{ productDetails?.description }}</span>
+    <div class="d-flex align-items-baseline">
+      <h2>Product Description:</h2>
+      <h3 class="text-secondary ml-2">{{ productDetails?.description }}</h3>
     </div>
   </div>
 </div>

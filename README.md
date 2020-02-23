@@ -1,27 +1,38 @@
 # Zimbra
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+This project is developed using Angular version 8.3.21. This is a test project for an E-Commerce website showing basic listing and details page.
 
-## Development server
+## Pre-requisite
+1. Node must be installed in your system.
+1. Npm must be installed in your system.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Steps to run in dev mode
 
-## Code scaffolding
+1. Firstly, install all the project dependencies below command, in project root directory:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    ```
+    npm install
+    ```
 
-## Build
+1. Now we need to run the API server by command:
+    ```
+    npm run server
+    ```
+    > Note: Once server is up you will see message something like this in your screen
+    ```
+    Resources
+    http://localhost:3000/categories
+    http://localhost:3000/products
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+    Home
+    http://localhost:3000
+    ```
+    And you will be able to access APIs at `http://localhost:3000`
 
-## Running unit tests
+1. Now we need to run angular in dev mode using cmd:
+    ```
+    npm start
+    ```
+    Once server is up navigate to `http://localhost:4200/`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    >NOTE: If you face any issues while running `npm start` then try to download angular in your local machine and then run `ng serve`.

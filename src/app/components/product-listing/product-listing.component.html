@@ -1,0 +1,34 @@
+<h2>Product Listing Page</h2>
+<!-- Dropdown -->
+<section>
+  <div class="row">
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <button
+          class="btn btn-outline-primary"
+          id="dropdownBasic1"
+          ngbDropdownToggle
+        >
+          {{ selectedCategory?.name }}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button
+            *ngFor="let category of categoryList"
+            ngbDropdownItem
+            (click)="onCategoryChange(category)"
+          >
+            {{ category?.name }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Product Thumbnails -->
+<section class="d-flex flex-wrap">
+  <app-product-thumbnail
+    class="m-2"
+    *ngFor="let product of productList"
+    [product]="product"
+  ></app-product-thumbnail>
+</section>

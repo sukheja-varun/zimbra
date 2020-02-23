@@ -1,1 +1,9 @@
-<p>product-listing works!</p>
+<h2>Product Listing Page</h2>
+
+<section class="d-flex flex-wrap">
+  <app-product-thumbnail
+    class="m-2"
+    *ngFor="let product of productList"
+    [product]="product"
+  ></app-product-thumbnail>
+</section>

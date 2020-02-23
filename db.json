@@ -2,15 +2,15 @@
   "categories": [
     {
       "id": 1,
-      "name": "Face"
+      "name": "Lips"
     },
     {
       "id": 2,
-      "name": "Eyes"
+      "name": "Face"
     },
     {
       "id": 3,
-      "name": "Lips"
+      "name": "Eyes"
     },
     {
       "id": 4,

@@ -1,0 +1,17 @@
+<div class="card" style="width:400px">
+  <img
+    class="card-img-top"
+    [src]="product.imageUrl"
+    alt="Card image"
+    style="width:100%"
+  />
+  <div class="card-body">
+    <h4 class="card-title">{{ product.name }}</h4>
+    <!-- <p class="card-text">
+      Some example text some example text. John Doe is an architect and engineer
+    </p> -->
+    <a [routerLink]="['/product', product.id]" class="btn btn-primary"
+      >See Details</a
+    >
+  </div>
+</div>

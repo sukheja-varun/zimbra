@@ -11,10 +11,11 @@ export class NotFoundComponent implements OnInit {
   constructor(private _router: Router) { }
 
   ngOnInit() {
-    setInterval(() => {
+    let refreshIntervalId = setInterval(() => {
       this.time--;
     }, 1000);
     setTimeout(() => {
+      clearInterval(refreshIntervalId);
       this.redirectToHome();
     }, 1000 * 5);
   }
